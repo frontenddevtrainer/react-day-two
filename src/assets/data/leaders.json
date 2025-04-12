@@ -1,0 +1,99 @@
+{
+    "freedom_fighters": [
+      {
+        "name": "Mahatma Gandhi",
+        "country": "India",
+        "role": "Freedom Fighter",
+        "note": "Led India’s non-violent independence movement against British rule."
+      },
+      {
+        "name": "Nelson Mandela",
+        "country": "South Africa",
+        "role": "Freedom Fighter",
+        "note": "Fought against apartheid and was imprisoned for 27 years."
+      },
+      {
+        "name": "Che Guevara",
+        "country": "Argentina/Cuba",
+        "role": "Revolutionary",
+        "note": "Played a major role in the Cuban Revolution."
+      },
+      {
+        "name": "Bhagat Singh",
+        "country": "India",
+        "role": "Freedom Fighter",
+        "note": "A symbol of youth resistance during India’s struggle for independence."
+      },
+      {
+        "name": "Harriet Tubman",
+        "country": "United States",
+        "role": "Abolitionist",
+        "note": "Helped enslaved people escape through the Underground Railroad."
+      }
+    ],
+    "politicians": [
+      {
+        "name": "Barack Obama",
+        "country": "United States",
+        "role": "President",
+        "note": "44th President of the United States and the first African-American president."
+      },
+      {
+        "name": "Angela Merkel",
+        "country": "Germany",
+        "role": "Chancellor",
+        "note": "Led Germany for 16 years as one of the world’s most powerful women."
+      },
+      {
+        "name": "Narendra Modi",
+        "country": "India",
+        "role": "Prime Minister",
+        "note": "Prime Minister of India since 2014."
+      },
+      {
+        "name": "Winston Churchill",
+        "country": "United Kingdom",
+        "role": "Prime Minister",
+        "note": "Led Britain during World War II."
+      },
+      {
+        "name": "Franklin D. Roosevelt",
+        "country": "United States",
+        "role": "President",
+        "note": "Led the US during the Great Depression and World War II."
+      }
+    ],
+    "leaders": [
+      {
+        "name": "Martin Luther King Jr.",
+        "country": "United States",
+        "role": "Civil Rights Leader",
+        "note": "Led the American civil rights movement with nonviolent activism."
+      },
+      {
+        "name": "Malcolm X",
+        "country": "United States",
+        "role": "Human Rights Activist",
+        "note": "Advocated for the rights of Black Americans."
+      },
+      {
+        "name": "Aung San Suu Kyi",
+        "country": "Myanmar",
+        "role": "Pro-democracy Leader",
+        "note": "Nobel Peace Prize laureate and leader of Myanmar’s opposition movement."
+      },
+      {
+        "name": "Jawaharlal Nehru",
+        "country": "India",
+        "role": "Leader & Politician",
+        "note": "India’s first Prime Minister and a key figure in the independence movement."
+      },
+      {
+        "name": "Simón Bolívar",
+        "country": "Venezuela",
+        "role": "Military & Political Leader",
+        "note": "Played a key role in Latin America's successful struggle for independence from the Spanish Empire."
+      }
+    ]
+  }
+  
