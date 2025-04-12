@@ -4,11 +4,18 @@ export default function Login() {
 
     const [form, setForm] = useState({})
 
-    function onValueChange(e){
+    function onValueChange(e) {
         const value = e.target.value;
         const name = e.target.name
         const updatedFormValue = { ...form, [name]: value };
         setForm(updatedFormValue);
+    }
+
+    async function submitLoginForm(e) {
+        e.preventDefault();
+        const response = await fetch("API_URL", { body: JSON.stringify(form), method: "post" });
+        const json = await response.json();
+        console.log(json);
     }
 
     return <div className="login-container animated fadeInDown bootstrap snippets bootdeys">
@@ -28,22 +35,24 @@ export default function Login() {
                     </a>
                 </div>
             </div>
-            <div className="loginbox-or">
-                <div className="or-line"></div>
-                <div className="or">OR</div>
-            </div>
-            <div className="loginbox-textbox">
-                <input type="text" className="form-control" placeholder="Email" name="email" onChange={onValueChange} />
-            </div>
-            <div className="loginbox-textbox">
-                <input type="text" className="form-control" placeholder="Password" name="password" onChange={onValueChange} />
-            </div>
-            <div className="loginbox-forgot">
-                <a href="">Forgot Password?</a>
-            </div>
-            <div className="loginbox-submit">
-                <input type="button" className="btn btn-primary btn-block" value="Login" />
-            </div>
+            <form onSubmit={submitLoginForm}>
+                <div className="loginbox-or">
+                    <div className="or-line"></div>
+                    <div className="or">OR</div>
+                </div>
+                <div className="loginbox-textbox">
+                    <input type="text" className="form-control" placeholder="Email" name="email" onChange={onValueChange} />
+                </div>
+                <div className="loginbox-textbox">
+                    <input type="text" className="form-control" placeholder="Password" name="password" onChange={onValueChange} />
+                </div>
+                <div className="loginbox-forgot">
+                    <a href="">Forgot Password?</a>
+                </div>
+                <div className="loginbox-submit">
+                    <input type="submit" className="btn btn-primary btn-block" value="Login" />
+                </div>
+            </form>
             <div className="loginbox-signup">
                 <a href="#register.html">Sign Up With Email</a>
             </div>
@@ -51,6 +60,6 @@ export default function Login() {
         <div className="logobox">
         </div>
 
-        {JSON.stringify(form)};
+
     </div>
 }
