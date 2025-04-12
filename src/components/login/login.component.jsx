@@ -1,4 +1,16 @@
+import { useState } from "react"
+
 export default function Login() {
+
+    const [form, setForm] = useState({})
+
+    function onValueChange(e){
+        const value = e.target.value;
+        const name = e.target.name
+        const updatedFormValue = { ...form, [name]: value };
+        setForm(updatedFormValue);
+    }
+
     return <div className="login-container animated fadeInDown bootstrap snippets bootdeys">
         <div className="loginbox bg-white">
             <div className="loginbox-title">SIGN IN</div>
@@ -21,10 +33,10 @@ export default function Login() {
                 <div className="or">OR</div>
             </div>
             <div className="loginbox-textbox">
-                <input type="text" className="form-control" placeholder="Email" />
+                <input type="text" className="form-control" placeholder="Email" name="email" onChange={onValueChange} />
             </div>
             <div className="loginbox-textbox">
-                <input type="text" className="form-control" placeholder="Password" />
+                <input type="text" className="form-control" placeholder="Password" name="password" onChange={onValueChange} />
             </div>
             <div className="loginbox-forgot">
                 <a href="">Forgot Password?</a>
@@ -38,5 +50,7 @@ export default function Login() {
         </div>
         <div className="logobox">
         </div>
+
+        {JSON.stringify(form)};
     </div>
 }
