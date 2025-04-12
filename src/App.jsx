@@ -30,7 +30,6 @@ function App() {
         <option value={"politicians"}>Politicians</option>
         <option value={"leaders"}>Leaders</option>
       </select>
-
       <div className='person-list'>
         {
           data && data[category] && data[category].map(function (person, index) {
@@ -38,9 +37,6 @@ function App() {
           })
         }
       </div>
-
-
-
     </>
   )
 }
