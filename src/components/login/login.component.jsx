@@ -3,11 +3,34 @@ import { useState } from "react"
 export default function Login() {
 
     const [form, setForm] = useState({})
+    const [formError, setFormError] = useState(null);
+
+    function validateForm(formData) {
+
+        if (!formData?.email || formData?.email === "") {
+            setFormError("Email is empty");
+            return;
+        }
+
+        if (formData.email && !formData.email.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)) {
+            setFormError("Email is format not correct.");
+            return;
+        }
+
+        if (!formData?.password || formData?.password === "") {
+            setFormError("Password is empty");
+            return;
+        }
+
+        setFormError(null);
+
+    }
 
     function onValueChange(e) {
         const value = e.target.value;
-        const name = e.target.name
+        const name = e.target.name;
         const updatedFormValue = { ...form, [name]: value };
+        validateForm(updatedFormValue)
         setForm(updatedFormValue);
     }
 
@@ -57,6 +80,7 @@ export default function Login() {
                 <a href="#register.html">Sign Up With Email</a>
             </div>
         </div>
+        {formError}
         <div className="logobox">
         </div>
 
