@@ -31,11 +31,13 @@ function App() {
         <option value={"leaders"}>Leaders</option>
       </select>
 
-      {
-        data && data[category] && data[category].map(function (person, index) {
-          return <PersonCard person={person} />
-        })
-      }
+      <div className='person-list'>
+        {
+          data && data[category] && data[category].map(function (person, index) {
+            return <PersonCard person={person} />
+          })
+        }
+      </div>
 
 
 

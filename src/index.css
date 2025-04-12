@@ -1,3 +1,17 @@
 body {
   background: center url("/src/assets/images/sky-bg.jpeg");
 }
+
+
+.person-list {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.person {
+  border-radius: 6px;
+  background-color: aliceblue;
+  padding: 20px;
+  
+}
